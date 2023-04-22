@@ -21,6 +21,16 @@ export default function Login() {
   const [email, onEmailChange, emailError, onEmailBlur] = useInput("", (val) =>
     emailValidator(val)
   );
+
+  const passwordValidator = (value) => {
+    if (password.length <= 8) {
+      return "Invalid password";
+    }
+  };
+  const [password, onPasswordChange, passwordError] = useInput("", (val) =>
+    passwordValidator(val)
+  );
+
   return (
     <div className={`${styles.container}`}>
       <div className={`${styles.head}`}>
@@ -41,14 +51,24 @@ export default function Login() {
             ></Input>
           </div>
           <div className={`${styles.Margin}`} id="Mail">
-            <label className="label">Password</label>
+            {passwordError}
+            <Input
+              label="Enter Password"
+              className="input"
+              type="password"
+              name="password"
+              value={password}
+              onChange={onPasswordChange}
+              placeholder="Enter Password"
+            ></Input>
+            {/* <label className="label">Password</label>
             <input
               className={`${styles.input}`}
               name="password"
               value={first.password}
               onChange={onChange}
               placeholder="Password"
-            ></input>
+            ></input> */}
           </div>
           <button type="submit" className={`${styles.Margin}`} id="Log">
             LOGIN
