@@ -27,7 +27,7 @@ export default function Login() {
       return "Invalid password";
     }
   };
-  const [password, onPasswordChange, passwordError] = useInput("", (val) =>
+  const [password, onPasswordChange, passwordError, onPasswordBlur] = useInput("", (val) =>
     passwordValidator(val)
   );
 
@@ -38,11 +38,11 @@ export default function Login() {
       </div>
       <div>
         <form>
-          <div className={`${styles.Margin}`} id="Mail">
+          <div className={`${styles.mail}`} >
             {emailError}
             <Input
               label="Email Address"
-              className="input"
+              className=""
               type="email"
               name="email"
               value={email}
@@ -50,7 +50,7 @@ export default function Login() {
               placeholder="Email address"
             ></Input>
           </div>
-          <div className={`${styles.Margin}`} id="Mail">
+          <div className={`${styles.password}`} >
             {passwordError}
             <Input
               label="Enter Password"
@@ -70,17 +70,16 @@ export default function Login() {
               placeholder="Password"
             ></input> */}
           </div>
-          <button type="submit" className={`${styles.Margin}`} id="Log">
+          <button type="submit" className={`${styles.login}`} >
             LOGIN
           </button>
           <hr className={`${styles.Margin}`}></hr>
-          <div className={`${styles.Margin}`} id="">
+          <div className={`${styles.doHaveAcc}`}>
             Don't have an account
           </div>
           <div
             onClick={() => navigate(ROUTES.register)}
-            className={`${styles.Margin}`}
-            id="Sign"
+            className={`${styles.signUp}`}
           >
             SIGN UP
           </div>
