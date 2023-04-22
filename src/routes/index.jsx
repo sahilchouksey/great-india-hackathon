@@ -9,9 +9,9 @@ export default function Routing() {
   return (
     <Layout>
       <Routes>
-        <Route exact path={ROUTES.home} element={<Home />} />
-        <Route path={ROUTES.products} element={<Products />} />
-        <Route path={ROUTES.categories} element={<Categories />} />
+        <Route exact path={ROUTES_.home} element={<Home />} />
+        <Route path={ROUTES_.products} element={<Products />} />
+        <Route path={ROUTES_.categories} element={<Categories />} />
       </Routes>
     </Layout>
   );
