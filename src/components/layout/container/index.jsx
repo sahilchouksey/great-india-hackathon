@@ -5,7 +5,7 @@ import styles from "./container.module.scss";
 const Container = forwardRef((props, ref) => {
   return (
     <div ref={ref} className={styles.container}>
-      {/* <Header /> */}
+      <Header />
       {props.children}
     </div>
   );

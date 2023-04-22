@@ -4,45 +4,45 @@
       "id": 1,
       "category": "Laptop & PC",
       "categoryId": 4,
-      "title": "ASUS X441UV",
+      "name": "ASUS X441UV",
       "description": "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
-      "amount": 2800,
+      "price": 2800,
       "image": "/images/laptop.png"
     },
     {
       "id": 2,
       "category": "Laptop & PC",
       "categoryId": 4,
-      "title": "ASUS ZENBOOK C103",
+      "name": "ASUS ZENBOOK C103",
       "description": "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
-      "amount": 800,
+      "price": 800,
       "image": "/images/laptop.png"
     },
     {
       "id": 3,
       "category": "Smartphone",
       "categoryId": 3,
-      "title": "IPhone 14",
+      "name": "IPhone 14",
       "description": "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
-      "amount": 2800,
+      "price": 2800,
       "image": "/images/laptop.png"
     },
     {
       "id": 4,
       "category": "Smartphone",
       "categoryId": 3,
-      "title": "SAMSUNG A531",
+      "name": "SAMSUNG A531",
       "description": "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
-      "amount": 2800,
+      "price": 2800,
       "image": "/images/laptop.png"
     },
     {
       "id": 5,
       "category": "Fashion",
       "categoryId": 2,
-      "title": "BAJU WANITA SIMPLE",
+      "name": "BAJU WANITA SIMPLE",
       "description": "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
-      "amount": 2800,
+      "price": 2800,
       "image": "/images/laptop.png"
     }
   ],
@@ -108,9 +108,9 @@
     ],
     "category": "Laptop & PC",
     "title": "ASUS X441UV",
-    "description": "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
+    "nameiption": "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
     "productDetails": "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
-    "amount": 2800,
+    "price": 2800,
     "stock": 3,
     "trustTexts": [
       {
