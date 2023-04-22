@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Login.css";
+import styles from "./Login.module.scss";
 import { ROUTES } from "../../../../routes/data";
 
 export default function Login() {
@@ -10,16 +10,16 @@ export default function Login() {
     setFirst({ ...first, [e.target.name]: e.target.name });
   };
   return (
-    <div className="container">
-      <div className="head">
+    <div className={`${styles.container}`}>
+      <div className={`${styles.head}`}>
         <h2>To continue Login into our web</h2>
       </div>
       <div>
         <form>
-          <div className="Margin" id="Mail">
+          <div className={`${styles.Margin}`} id="Mail">
             <label className="label">Email Address</label>
             <input
-              className="input"
+              className={`${styles.input}`}
               type="email"
               name="email"
               value={first.email}
@@ -27,26 +27,26 @@ export default function Login() {
               placeholder="Email address"
             ></input>
           </div>
-          <div className="Margin" id="Mail">
+          <div className={`${styles.Margin}`} id="Mail">
             <label className="label">Password</label>
             <input
-              className="input"
+              className={`${styles.input}`}
               name="password"
               value={first.password}
               onChange={onChange}
               placeholder="Password"
             ></input>
           </div>
-          <button type="submit" className="Margin" id="Log">
+          <button type="submit" className={`${styles.Margin}`} id="Log">
             LOGIN
           </button>
-          <hr className="Margin"></hr>
-          <div className="Margin" id="">
+          <hr className={`${styles.Margin}`}></hr>
+          <div className={`${styles.Margin}`} id="">
             Don't have an account
           </div>
           <div
             onClick={() => navigate(ROUTES.register)}
-            className="Margin"
+            className={`${styles.Margin}`}
             id="Sign"
           >
             SIGN UP
