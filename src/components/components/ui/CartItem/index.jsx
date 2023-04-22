@@ -3,12 +3,23 @@ import styles from "./CartItem.module.scss";
 import Button from "../../button";
 import { TextMedium } from "../../typography";
 import { Image } from "react-bootstrap";
-function CartItem({ name, description }) {
-  const [count, setCount] = useState(1);
-  const decrement = () => {
-    if (count > 1) {
-      setCount(count - 1);
-    }
+import { useDispatch } from "react-redux";
+import { updateCartItem } from "../../../../store/user/slice";
+function CartItem({ id, name, description, price, quaintity, image }) {
+  // const [count, setCount] = useState(1);
+
+  const dispatch = useDispatch();
+
+  const updateQuantity = (e, type) => {
+    const JUMPBY = 1;
+    const data = {
+      id: id,
+      increment: type == "increment",
+      decrement: type == "decrement",
+      quaintity: JUMPBY,
+    };
+
+    dispatch(updateCartItem(data));
   };
 
   return (
@@ -55,7 +66,7 @@ function CartItem({ name, description }) {
         >
           <div className={`ms-3 ${styles["buttons"]}`}>
             <span className={styles["button"]}>
-              <Button type="plain" onClick={decrement}>
+              <Button type="plain" onClick={(e) => updateQuantity(e, "")}>
                 -
               </Button>
             </span>
