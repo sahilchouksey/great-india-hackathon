@@ -8,7 +8,7 @@ import Search from "../containers/Search";
 import Login from "../containers/Login";
 
 import Layout from "../components/layout";
-import { ROUTES as ROUTES_ } from "./data";
+import { ROUTES } from "./data";
 export default function Routing() {
   return (
     <Layout>
