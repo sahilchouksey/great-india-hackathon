@@ -66,7 +66,7 @@ export default function ProductHeader({ product }) {
           including all taxes
         </TextSmall>
 
-        <AddToCart />
+        <AddToCart product={product} />
       </div>
       <Line />
       <div
