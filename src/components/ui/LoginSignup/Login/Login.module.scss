@@ -19,6 +19,28 @@
   animation-iteration-count: infinite;
 }
 
+.mail .in_mail {
+  border-radius: 5px;
+  padding: 20px;
+  background-color: white;
+  font-size: 20px;
+
+  border: 2px solid grey;
+}
+.mail .email_label {
+  font-size: 20px;
+}
+
+.password .password_label {
+  font-size: 20px;
+}
+.password .in_password {
+  border-radius: 5px;
+  padding: 20px;
+  background-color: white;
+  font-size: 20px;
+  border: 2px solid grey;
+}
 
 /* Set the animation duration and easing */
 @keyframes move {
@@ -35,11 +57,11 @@
 
 /* Apply the animation to your text */
 
-.login{
+.login {
   width: 100%;
   margin-top: 30px;
-  padding:10px 0 10px 0 ;
-  font-size: 15px;
+  padding: 20px 0 20px 0;
+  font-size: 20px;
   color: white;
   background-color: darkorange;
   border: none;
@@ -47,11 +69,17 @@
   border-radius: 5px;
 }
 
-.signUp{
+.doHaveAcc {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.signUp {
   width: 100%;
   margin-top: 30px;
-  padding:10px 0 10px 0 ;
-  font-size: 15px;
+  padding: 20px 0 20px 0;
+  font-size: 20px;
   color: white;
   background-color: darkorange;
   border: none;
