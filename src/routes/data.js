@@ -11,4 +11,5 @@ export const ROUTES = {
   search: "/search",
   register: "/signup",
   yourHeader: "/orderHeader",
+  inventory: "/Management",
 };

@@ -1,12 +1,12 @@
-import React from 'react'
-import './TurnOver.css';
+import React from "react";
+import "./TurnOver.css";
 function TurnOver(props) {
   return (
-    <div className='inner'>
-        <span>{props.category}</span>
-        <span>${props.sold}</span>
-    </div>
-  )
+    <tr>
+      <td>{props.catagory} </td>
+      <td>{props.turnOver}</td>
+    </tr>
+  );
 }
 
-export default TurnOver
+export default TurnOver;

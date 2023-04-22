@@ -1,32 +1,33 @@
-.management{
-    margin:0px auto;
-    width :1000px;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    
-    background-color: rgb(255, 255, 255);
-    
-}
-.header{
-    display: flex;
-    flex-direction: column;
-}
-.heading{
-    margin-bottom: 10px;
+.management {
+  margin: 0px auto;
+  width: 1000px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
 
+  background-color: rgb(255, 255, 255);
 }
-.yellow{
-    width: auto;
-    background-color: #FF9F00;
-    color: white;
-    text-align: center;
-    font-size: 36px;
-    font:bold;
-    border-radius: 5px;
+.container2 {
+  max-height: 200px;
+  object-fit: cover;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px 0;
 }
-.Stocks{
-    margin-top:70px;
-    margin-left: auto;
+.header {
+  display: flex;
+  flex-direction: column;
 }
-
+.heading {
+  margin-bottom: 10px;
+}
+.yellow {
+  width: auto;
+  background-color: #ff9f00;
+  color: white;
+  text-align: center;
+  font-size: 36px;
+  font: bold;
+  border-radius: 5px;
+}

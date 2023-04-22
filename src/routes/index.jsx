@@ -6,7 +6,7 @@ import Categories from "../containers/Categories";
 import Category from "../containers/Category";
 import Search from "../containers/Search";
 import Login from "../containers/Login";
-
+import Management from "../components/ui/inventory/component/Management";
 import Layout from "../components/layout";
 import { ROUTES } from "./data";
 export default function Routing() {
@@ -23,6 +23,10 @@ export default function Routing() {
 
         {/* AUTHENTICATION PAGES */}
         <Route path={ROUTES.login} element={<Login />} />
+        <Route
+          path={ROUTES.inventory}
+          element={<Management></Management>}
+        ></Route>
       </Routes>
     </Layout>
   );

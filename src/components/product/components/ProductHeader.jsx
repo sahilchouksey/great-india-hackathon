@@ -5,9 +5,9 @@ import {
   TextLarge,
   TextMedium,
   TextSmall,
-} from "../../components/typography";
+} from "../../typography";
 import Button from "../../button";
-import Line from "../../components/ui/Line";
+import Line from "../../ui/Line";
 
 import CartIcon from "../../../assets/icons/cart";
 import Showcase from "../../../components/ui/showcase";
