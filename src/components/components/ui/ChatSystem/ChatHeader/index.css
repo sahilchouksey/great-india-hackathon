@@ -1,0 +1,35 @@
+.headder{
+    display: flex;
+    
+    flex-direction: row;
+    width: 100%;
+}
+.seller{
+    margin:5px 20px;
+}
+.isResolved{
+    display: flex;
+    flex-direction: row;
+    margin : 5px;
+    margin-right:  50px;
+    margin-left: auto;
+    justify-content: space-between;
+}
+
+.buttons{
+    
+    margin:auto 0px;
+    margin-left:  50px;
+    
+}
+.yes{
+    border-radius: 50px;
+    background-color: green;
+    margin-right: 10px;
+    border-style: none;
+}
+.No{
+    border-radius: 50px;
+    border-style: none;
+    background-color: rgb(238, 87, 87);
+}

@@ -1,0 +1,26 @@
+.ADD{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 2.0px 5.9px 13.9px hsl(0deg 0% 0% / 0.28);
+    
+    
+}
+.add{
+    
+    font-size: medium;
+}
+.icon{
+    width: 25px;
+    height: 25px;
+    padding:auto;
+    
+    margin-bottom: 5px;
+   
+
+    border-radius: 3px;
+    border-style: none;
+    background-color: rgb(252, 214, 156);
+}

@@ -1,0 +1,74 @@
+.Margin{
+    width: auto;
+    margin: 30px 0px;
+}
+.container{
+    width: auto;
+    min-width: 600px;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+#Mail{
+    display: flex;
+    flex-direction: column;
+
+}
+.head{
+    text-align: center;
+    margin-bottom: 0px;
+    animation-name: move;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    
+}
+.label{
+    margin-bottom: 5px;
+}
+.input{
+    padding: 20px 15px;
+    border-radius: 2px;
+    border-color: rgb(207, 135, 26);
+    
+    border: 2px;
+}
+#Sign{
+    border-radius: 100px;
+    padding: 15px ;
+    background-color: #FF9F00;
+    align-items: center;
+    text-align: center;
+}
+#Log{
+    border-radius: 100px;
+    padding: 15px ;
+    background-color: #FF9F00;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    border-style: none;
+    
+}
+/* Set the animation duration and easing */
+@keyframes move {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-2px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Apply the animation to your text */
+  .your-text {
+    animation-name: move;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  

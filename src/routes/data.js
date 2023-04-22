@@ -9,7 +9,6 @@ export const ROUTES = {
   orders: "/orders",
   complains: "/complains",
   search: "/search",
-  Login: "/login",
-  SingUp: "/signup",
+  register: "/signup",
   yourHeader: "/orderHeader",
 };
