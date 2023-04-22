@@ -1,45 +1,58 @@
 import React, { useState } from "react";
 import styles from "./CartItem.module.scss";
 import Button from "../../button";
-import { Form, InputGroup } from "react-bootstrap";
-import { TextMedium } from "../../typography";
-function Inddex() {
-  const [count, setCount] = useState(1);
-  const decrement = () => {
-    if (count > 1) {
-      setCount(count - 1);
-    }
+import { TextLarge, TextMedium } from "../../typography";
+import { Image } from "react-bootstrap";
+import { useDispatch } from "react-redux";
+import { removeFromCart, updateCartItem } from "../../../store/user/slice";
+function CartItem({ id, name, description, price, quantity, image }) {
+  const dispatch = useDispatch();
+
+  const updateQuantity = (e, type) => {
+    const JUMPBY = 1;
+    const data = {
+      id: id,
+      increment: type == "increment",
+      decrement: type == "decrement",
+      quantity: JUMPBY,
+    };
+
+    dispatch(updateCartItem(data));
+  };
+
+  const removeProduct = () => {
+    const data = {
+      id: id,
+    };
+    dispatch(removeFromCart(data));
   };
 
   return (
-    <div className={styles["main-container"]}>
+    <div className={`mt-3 ${styles["main-container"]}`}>
       <div className={styles["component-body"]}>
         <div className={styles["first"]}>
           <div className="img_product_details d-flex justify-content-start align-items-start">
             <span className={styles["img"]}>
-              <img
-                src="./images/image 13.png"
-                className={styles["product-image"]}
-              />
+              <Image src={image} className={styles["product-image"]} />
             </span>
             <span className={styles["product-info"]}>
               <TextMedium
                 type="lg"
                 className={`t-regular ${styles["Product-sellerInfo"]}  `}
               >
-                Asus Ryzon 7 Quad Core CP...
+                {name}
               </TextMedium>
               <TextMedium
                 type="sm"
                 className={`t-regular text-grey ${styles["Product-BasicInfo"]} mt-2 `}
               >
-                15.6 inch, gray, with MS Office
+                {description}
               </TextMedium>
               <TextMedium
                 type="lg"
                 className={`t-regular text-black${styles["Price"]} mt-3`}
               >
-                $94
+                {price}
               </TextMedium>
             </span>
           </div>
@@ -55,30 +68,47 @@ function Inddex() {
         >
           <div className={`ms-3 ${styles["buttons"]}`}>
             <span className={styles["button"]}>
-              <Button type="plain" onClick={decrement}>
-                -
+              <Button
+                type="plain"
+                onClick={(e) => updateQuantity(e, "decrement")}
+                disabled={quantity == 1}
+              >
+                <TextMedium
+                  type={"lg"}
+                  className={
+                    "t-regular d-flex align-items-center justify-content-center"
+                  }
+                >
+                  -
+                </TextMedium>
               </Button>
             </span>
 
-            {/* <Form.Control
-                className={`${styles["button-count"]}`}
-                placeholder="0"
-                aria-label="0"
-                value={count}
-                type="number"
-                min={1}
-              /> */}
             <Button type="plain" className={`ms-3 ${styles["button-count"]}`}>
-              {count}
+              {quantity}
             </Button>
             <span className={`ms-3 ${styles["button"]}`}>
-              <Button type="plain" onClick={() => setCount(count + 1)}>
-                +
+              <Button
+                type="plain"
+                onClick={(e) => updateQuantity(e, "increment")}
+              >
+                <TextMedium
+                  type={"lg"}
+                  className={
+                    "t-regular d-flex align-items-center justify-content-center"
+                  }
+                >
+                  +
+                </TextMedium>
               </Button>
             </span>
           </div>
           <TextMedium type="lg" className={`text-semibold ${styles["remove"]}`}>
-            <Button type="plain">Remove</Button>
+            <Button type="plain" onClick={removeProduct}>
+              <TextMedium type="md" className={"t-bold"}>
+                Remove
+              </TextMedium>
+            </Button>
           </TextMedium>
         </div>
       </div>
@@ -86,4 +116,4 @@ function Inddex() {
   );
 }
 
-export default Inddex;
+export default CartItem;

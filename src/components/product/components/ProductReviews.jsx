@@ -5,9 +5,9 @@ import {
   TextLarge,
   TextMedium,
   TextSmall,
-} from "../../components/typography";
-import Line from "../../components/ui/Line";
-import Button from "../../components/button";
+} from "../../../components/typography";
+import Line from "../../ui/Line";
+import Button from "../../button";
 
 function RatingBar({ progress, color }) {
   return (

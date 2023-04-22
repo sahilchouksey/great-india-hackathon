@@ -111,6 +111,7 @@
     "nameiption": "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
     "productDetails": "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
     "price": 2800,
+    "id": 1,
     "stock": 3,
     "trustTexts": [
       {
