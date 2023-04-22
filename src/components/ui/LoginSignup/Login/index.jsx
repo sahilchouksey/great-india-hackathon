@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Login.module.scss";
 import { ROUTES } from "../../../../routes/data";
+import useInput from "../../../../hooks/useInput";
+import Input from "../../Input";
 
 export default function Login() {
   const [first, setFirst] = useState({ email: "", password: "" });
@@ -9,6 +11,16 @@ export default function Login() {
   const onChange = (e) => {
     setFirst({ ...first, [e.target.name]: e.target.name });
   };
+
+  const emailValidator = (value) => {
+    if (email.length <= 4) {
+      return "Invalid email";
+    }
+    return "";
+  };
+  const [email, onEmailChange, emailError, onEmailBlur] = useInput("", (val) =>
+    emailValidator(val)
+  );
   return (
     <div className={`${styles.container}`}>
       <div className={`${styles.head}`}>
@@ -17,15 +29,16 @@ export default function Login() {
       <div>
         <form>
           <div className={`${styles.Margin}`} id="Mail">
-            <label className="label">Email Address</label>
-            <input
-              className={`${styles.input}`}
+            {emailError}
+            <Input
+              label="Email Address"
+              className="input"
               type="email"
               name="email"
-              value={first.email}
-              onChange={onChange}
+              value={email}
+              onChange={onEmailChange}
               placeholder="Email address"
-            ></input>
+            ></Input>
           </div>
           <div className={`${styles.Margin}`} id="Mail">
             <label className="label">Password</label>
