@@ -1,5 +1,5 @@
 import Showcase from "../ui/showcase";
-import data from "../assets/shared/data.json";
+import data from "../../assets/shared/data.json";
 function Home() {
   return (
     <>

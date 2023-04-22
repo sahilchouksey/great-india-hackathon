@@ -1,0 +1,157 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "category": "Laptop & PC",
+      "categoryId": 4,
+      "title": "ASUS X441UV",
+      "description": "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
+      "amount": 2800,
+      "image": "/images/laptop.png"
+    },
+    {
+      "id": 2,
+      "category": "Laptop & PC",
+      "categoryId": 4,
+      "title": "ASUS ZENBOOK C103",
+      "description": "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
+      "amount": 800,
+      "image": "/images/laptop.png"
+    },
+    {
+      "id": 3,
+      "category": "Smartphone",
+      "categoryId": 3,
+      "title": "IPhone 14",
+      "description": "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
+      "amount": 2800,
+      "image": "/images/laptop.png"
+    },
+    {
+      "id": 4,
+      "category": "Smartphone",
+      "categoryId": 3,
+      "title": "SAMSUNG A531",
+      "description": "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
+      "amount": 2800,
+      "image": "/images/laptop.png"
+    },
+    {
+      "id": 5,
+      "category": "Fashion",
+      "categoryId": 2,
+      "title": "BAJU WANITA SIMPLE",
+      "description": "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
+      "amount": 2800,
+      "image": "/images/laptop.png"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "image": "/images/skin-care.png",
+
+      "title": "Skin Care"
+    },
+    {
+      "id": 2,
+      "image": "/images/skin-care.png",
+
+      "title": "Fashion"
+    },
+    {
+      "id": 3,
+      "image": "/images/skin-care.png",
+
+      "title": "Smartphone"
+    },
+    {
+      "id": 4,
+      "image": "/images/skin-care.png",
+
+      "title": "Laptop & PC"
+    },
+    {
+      "id": 5,
+      "image": "/images/skin-care.png",
+
+      "title": "Electronic"
+    }
+  ],
+  "product": {
+    "images": [
+      {
+        "src": "/images/laptop.png",
+        "alt": "Image 1",
+        "id": 1
+      },
+      {
+        "src": "/images/laptop.png",
+        "alt": "Image 2",
+        "id": 2
+      },
+      {
+        "src": "/images/laptop.png",
+        "alt": "Image 3",
+        "id": 3
+      },
+      {
+        "src": "/images/laptop.png",
+        "alt": "Image 4",
+        "id": 4
+      },
+      {
+        "src": "/images/laptop.png",
+        "alt": "Image 5",
+        "id": 5
+      }
+    ],
+    "category": "Laptop & PC",
+    "title": "ASUS X441UV",
+    "description": "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
+    "productDetails": "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
+    "amount": 2800,
+    "stock": 3,
+    "trustTexts": [
+      {
+        "id": 1,
+        "text": "100% Original Products"
+      },
+      {
+        "id": 2,
+        "text": "Pay on delivery might be available"
+      },
+      {
+        "id": 3,
+        "text": "Easy 14 Days returns"
+      },
+      {
+        "id": 4,
+        "text": "this item is only returnable not exchangeble"
+      }
+    ],
+    "rating": 3.5,
+    "reviews": [
+      {
+        "id": 1,
+        "rating": 3,
+        "review": "nice"
+      },
+      {
+        "id": 2,
+        "rating": 2,
+        "review": "average"
+      },
+      {
+        "id": 3,
+        "rating": 1,
+        "review": "Dear Customer Service Team, I am writing to express my deep disappointment with the random product that I recently purchased from your company. I have been a loyal customer for many years and have always been satisfied with the quality of your products, but this time I was left extremely dissatisfied.  First and foremost, the product I received was not at all what I expected. The product description on your website made it seem like it was exactly what I was looking for, but when it arrived, it was nothing like what was advertised. The product was of poor quality, poorly made, and did not function as intended.Furthermore, the packaging was inadequate and the product arrived damaged. I was shocked to see that the product was poorly protected, with no bubble wrap or other protective material. As a result, the product was dented and scratched, making it impossible to use. To add to my frustration, when I tried to contact your customer service team to address these issues, I was met with unhelpful and rude responses. I was made to feel like my concerns were not important and that my purchase was not worth their time. This lack of professionalism and customer service is unacceptable.Overall, I am extremely dissatisfied with my purchase and the level of customer service I received. I expect a full refund for the product, as well as compensation for the inconvenience and frustration that this has caused me. I hope that you take this feedback seriously and work to improve your products and customer service in the future.Sincerely,Sahil"
+      },
+      {
+        "id": 4,
+        "rating": 5,
+        "review": "Fabulous"
+      }
+    ]
+  }
+}

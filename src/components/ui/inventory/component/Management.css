@@ -1,0 +1,32 @@
+.management{
+    margin:0px auto;
+    width :1000px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    
+    background-color: rgb(255, 255, 255);
+    
+}
+.header{
+    display: flex;
+    flex-direction: column;
+}
+.heading{
+    margin-bottom: 10px;
+
+}
+.yellow{
+    width: auto;
+    background-color: #FF9F00;
+    color: white;
+    text-align: center;
+    font-size: 36px;
+    font:bold;
+    border-radius: 5px;
+}
+.Stocks{
+    margin-top:70px;
+    margin-left: auto;
+}
+
