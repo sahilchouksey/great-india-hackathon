@@ -1,10 +1,10 @@
 import { useEffect, useRef } from "react";
 import { Image } from "react-bootstrap";
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
-import "./splide.min.scss";
-import styles from "./styles.module.scss";
-import LeftArrow from "../../assets/icons/leftArrow";
-import RightArrow from "../../assets/icons/rightArrow";
+import "../splide.min.scss";
+import styles from "../styles.module.scss";
+import LeftArrow from "../../../assets/icons/leftArrow";
+import RightArrow from "../../../assets/icons/rightArrow";
 
 export default function ImageSection({ images }) {
   const galleryThumbnailRef = useRef();

@@ -58,9 +58,9 @@ export const userSlice = createSlice({
       const newCartItem = {
         id: data.id,
         image: data.image,
-        title: data.title,
+        name: data.name,
         description: data.description,
-        amount: data.amount,
+        price: data.price,
         quantity: 1,
       };
       state.cart.push(newCartItem);

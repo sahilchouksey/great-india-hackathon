@@ -1,4 +1,4 @@
-import ImageSection from "./ImageSection";
+import ImageSection from "./components/ImageSection";
 import ProductDetails from "./Product";
 import data from "../../assets/shared/data.json";
 import styles from "./styles.module.scss";
