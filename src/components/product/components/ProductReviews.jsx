@@ -5,9 +5,9 @@ import {
   TextLarge,
   TextMedium,
   TextSmall,
-} from "../../components/typography";
-import Line from "../../components/ui/Line";
-import Button from "../../components/button";
+} from "../../../components/typography";
+import Line from "../../ui/Line";
+import Button from "../../button";
 
 function RatingBar({ progress, color }) {
   return (
@@ -69,7 +69,7 @@ function RatingBars({ ratings }) {
 
       const progress = 100 / (ratings.length / totalRatingCount);
 
-      console.log("progress", progress);
+      console.log("progress", progress, ratings.length, totalRatingCount);
 
       return (
         <RatingBar

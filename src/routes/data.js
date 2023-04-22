@@ -9,6 +9,7 @@ export const ROUTES = {
   orders: "/orders",
   complains: "/complains",
   search: "/search",
+  cart: "/cart",
   register: "/signup",
   yourHeader: "/orderHeader",
 };

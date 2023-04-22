@@ -1,5 +1,5 @@
 .main-container {
-  width: 120%;
+  width: 100%;
   color: black;
   display: flex;
   justify-content: center;
@@ -14,7 +14,7 @@
   background-color: white;
 }
 .component-body:hover {
-  box-shadow: 0px 0px 5px 0px var(--color-grey);
+  box-shadow: 0px 0px 20px 5px #eeeeeed5;
 }
 .product-image {
   width: 150px;
@@ -37,8 +37,9 @@
   gap: 50px;
 }
 .button button {
-  width: 32px !important;
-  height: fit-content !important;
+  width: 38px !important;
+  height: 38px !important;
+
   border-radius: 50% !important;
   color: var(--color-black) !important;
   background: #ffffff !important;
@@ -48,9 +49,9 @@
   }
 }
 .button-count {
-  width: 32px !important;
+  min-width: 32px !important;
   height: fit-content !important;
-  border-radius: 22% !important;
+  border-radius: 4px !important;
   color: var(--color-black) !important;
   background: #ffffff !important;
   cursor: default !important;
@@ -60,11 +61,14 @@
   }
 }
 .remove button {
-  border: none;
-  outline: none;
-  font-size: large;
-  font-weight: 500;
-  background-color: var(--color-tertiary);
+  padding: 6px 8px !important;
+  border-radius: 6px !important;
+
+  &:active,
+  &:hover {
+    background-color: var(--color-danger) !important;
+    color: #fff !important;
+  }
 }
 
 .Product-sellerInfo {

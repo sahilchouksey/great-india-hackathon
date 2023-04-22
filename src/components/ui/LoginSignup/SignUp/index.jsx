@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./SignUp.module.scss";
+
 import { ROUTES } from "../../../../routes/data";
 import useInput from "../../../../hooks/useInput";
 import Input from "../../Input";
@@ -43,17 +44,14 @@ export default function SignUp() {
     (val) => passwordValidator(val)
   );
 
-    
   const confPasswordValidator = (value) => {
     if (value.length <= 8) {
       return "Invalid password";
     }
     return "";
   };
-  const [conf_password, onconfPasswordChange, PasswordError, onpasswordBlur] = useInput(
-    "",
-    (val) => confPasswordValidator(val)
-  );
+  const [conf_password, onconfPasswordChange, PasswordError, onpasswordBlur] =
+    useInput("", (val) => confPasswordValidator(val));
   return (
     <div className={`${styles.container}`}>
       <div className={`${styles.head}`}>
@@ -103,7 +101,7 @@ export default function SignUp() {
 
           <div className={`${styles.conf_password}`}>
             <Input
-              label="Enter Password"
+              label="Confirm Password"
               labelClasses={`${styles.conf_password_label}`}
               className={styles["in_conf_password"]}
               type="password"
@@ -114,11 +112,6 @@ export default function SignUp() {
             ></Input>
             {PasswordError}
           </div>
-          <button type="submit" className={`${styles.login}`}>
-            LOGIN
-          </button>
-          <hr className={`${styles.Margin}`}></hr>
-          <div className={`${styles.doHaveAcc}`}>Don't have an account</div>
           <div
             onClick={() => navigate(ROUTES.register)}
             className={`${styles.signUp}`}

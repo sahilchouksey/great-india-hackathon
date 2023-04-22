@@ -6,11 +6,11 @@ import Categories from "../containers/Categories";
 import Category from "../containers/Category";
 import Search from "../containers/Search";
 import Login from "../containers/Login";
+import Signup from "../containers/Signup";
 
 import Layout from "../components/layout";
 import { ROUTES } from "./data";
-
-
+import Cart from "../containers/Cart";
 export default function Routing() {
   return (
     <Layout>
@@ -22,9 +22,10 @@ export default function Routing() {
         <Route path={ROUTES.product} element={<Product />} />
         <Route path={ROUTES.category} element={<Category />} />
         <Route path={ROUTES.search} element={<Search />} />
-
+        <Route path={ROUTES.cart} element={<Cart />} />
         {/* AUTHENTICATION PAGES */}
         <Route path={ROUTES.login} element={<Login />} />
+        <Route path={ROUTES.signup} element={<Signup />} />
       </Routes>
     </Layout>
   );

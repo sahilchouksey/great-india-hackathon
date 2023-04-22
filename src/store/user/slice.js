@@ -47,12 +47,14 @@ export const userSlice = createSlice({
     // Cart reducers
     addToCart: (state, action) => {
       const data = action.payload;
-
-      const item =
-        state.cart.find((cartItem) => cartItem.id === data?.id) || {};
+      const item = state.cart.find((cartItem) => cartItem.id === data?.id);
       // item already exists in cart
+
+      console.log("cart", [...state.cart], item);
       if (item) {
-        item.quantity += 1;
+        item.quantity++;
+
+        return;
       }
       // if item is not in the cart yet
       const newCartItem = {
@@ -68,7 +70,8 @@ export const userSlice = createSlice({
     removeFromCart: (state, action) => {
       const data = action.payload;
 
-      state.cart = state.cart.filter((cartItem) => cartItem.id !== data?.id);
+      state.cart =
+        state.cart.filter((cartItem) => cartItem.id !== data?.id) || [];
     },
     updateCartItem: (state, action) => {
       const data = action.payload;

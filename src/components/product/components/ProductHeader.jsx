@@ -5,9 +5,9 @@ import {
   TextLarge,
   TextMedium,
   TextSmall,
-} from "../../components/typography";
+} from "../../typography";
 import Button from "../../button";
-import Line from "../../components/ui/Line";
+import Line from "../../ui/Line";
 
 import CartIcon from "../../../assets/icons/cart";
 import Showcase from "../../../components/ui/showcase";
@@ -20,12 +20,13 @@ const AddToCart = ({ product }) => {
 
   const addItemToCart = () => {
     const cartItem = {
-      id: generateRandomId(),
-      image: product?.image,
+      id: product?.id,
+      image: product?.images?.[0]?.src,
       name: product?.name,
-      description: product?.description,
+      description: product?.productDetails,
       price: product?.price,
     };
+    console.log(product);
     dispatch(addToCart(cartItem));
   };
 
@@ -66,7 +67,7 @@ export default function ProductHeader({ product }) {
           including all taxes
         </TextSmall>
 
-        <AddToCart />
+        <AddToCart product={product} />
       </div>
       <Line />
       <div
