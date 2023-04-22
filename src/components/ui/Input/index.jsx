@@ -7,21 +7,36 @@ export default function Input({
   label,
   type,
   placeholder,
-  value,
+  initialValue,
   onChange,
+  validater,
   ...props
 }) {
-  return (
-    // create a react input component using react bootstrap
+  // using custom useInput hook
 
+  const [value, handleChange, error, handleBlur] = useInput(
+    initialValue,
+    (value) => {
+      validater(value);
+    }
+  );
+  return (
     <Form.Group className={containerClasses}>
-      {label && <Form.Label className={labelClasses}>{label}</Form.Label>}
+      {label && (
+        <Form.Label className={`${error ? "text-danger" : ""}${labelClasses}`}>
+          {label}
+        </Form.Label>
+      )}
       <Form.Control
         className={inputClasses}
         type={type}
         placeholder={placeholder}
         value={value}
-        onChange={onChange}
+        onChange={(e) => {
+          handleChange(e);
+          onChange(e);
+        }}
+        onBlur={handleBlur}
         {...props}
       />
     </Form.Group>
