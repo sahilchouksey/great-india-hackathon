@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import styles from "./CartItem.module.scss";
 import Button from "../../button";
-import { Form, InputGroup } from "react-bootstrap";
 import { TextMedium } from "../../typography";
-function Inddex() {
+import { Image } from "react-bootstrap";
+function CartItem({ name, description }) {
   const [count, setCount] = useState(1);
   const decrement = () => {
     if (count > 1) {
@@ -17,7 +17,7 @@ function Inddex() {
         <div className={styles["first"]}>
           <div className="img_product_details d-flex justify-content-start align-items-start">
             <span className={styles["img"]}>
-              <img
+              <Image
                 src="./images/image 13.png"
                 className={styles["product-image"]}
               />
@@ -27,7 +27,7 @@ function Inddex() {
                 type="lg"
                 className={`t-regular ${styles["Product-sellerInfo"]}  `}
               >
-                Asus Ryzon 7 Quad Core CP...
+                {}
               </TextMedium>
               <TextMedium
                 type="sm"

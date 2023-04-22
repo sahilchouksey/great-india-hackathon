@@ -1,3 +1,4 @@
+import { props } from "cypress/types/bluebird";
 import { Form } from "react-bootstrap";
 export default function Input({
   containerClasses,
@@ -8,6 +9,7 @@ export default function Input({
   placeholder,
   value,
   onChange,
+  ...props
 }) {
   return (
     // create a react input component using react bootstrap
@@ -20,6 +22,7 @@ export default function Input({
         placeholder={placeholder}
         value={value}
         onChange={onChange}
+        {...props}
       />
     </Form.Group>
   );
