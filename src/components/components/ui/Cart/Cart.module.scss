@@ -1,0 +1,27 @@
+
+.container{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.orders{
+    margin-bottom: 50px;
+}
+.Place{
+    box-shadow: 0px 0px 1px 1px  ;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    background-color:darkorange;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+}
+
+
