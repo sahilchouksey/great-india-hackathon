@@ -7,36 +7,19 @@ export default function Input({
   label,
   type,
   placeholder,
-  initialValue,
+  value,
   onChange,
-  validater,
   ...props
 }) {
-  // using custom useInput hook
-
-  const [value, handleChange, error, handleBlur] = useInput(
-    initialValue,
-    (value) => {
-      validater(value);
-    }
-  );
   return (
     <Form.Group className={containerClasses}>
-      {label && (
-        <Form.Label className={`${error ? "text-danger" : ""}${labelClasses}`}>
-          {label}
-        </Form.Label>
-      )}
+      {label && <Form.Label className={labelClasses}>{label}</Form.Label>}
       <Form.Control
         className={inputClasses}
         type={type}
         placeholder={placeholder}
         value={value}
-        onChange={(e) => {
-          handleChange(e);
-          onChange(e);
-        }}
-        onBlur={handleBlur}
+        onChange={onChange}
         {...props}
       />
     </Form.Group>

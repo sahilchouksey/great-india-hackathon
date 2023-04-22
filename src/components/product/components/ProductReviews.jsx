@@ -69,7 +69,7 @@ function RatingBars({ ratings }) {
 
       const progress = 100 / (ratings.length / totalRatingCount);
 
-      console.log("progress", progress);
+      console.log("progress", progress, ratings.length, totalRatingCount);
 
       return (
         <RatingBar
