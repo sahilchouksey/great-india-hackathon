@@ -1,0 +1,10 @@
+TIMELINE 
+Day 1
+    - complete Home Page, Categories Page, Product Page, Category Page, Product Page
+Day 2 
+    - complete navbar, order / complains page, cart, complain system 
+Day 3 
+    - create inventory management system and backend with db and crud operation
+
+
+    

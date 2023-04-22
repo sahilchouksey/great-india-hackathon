@@ -1,0 +1,36 @@
+/** PUBLIC ROUTES -- ANYONE CAN ACCESS THESE ROUTES **/
+// e commerce platform home
+localhost:0000/
+
+// show all categories
+localhost:0000/categories
+
+// specific category
+localhost:0000/categories/:categoryId
+
+// show all products
+localhost:0000/products
+
+// search products
+localhost:0000/search?q=query
+
+// specific products
+localhost:0000/products/:productId
+
+
+/** PRIVATE ROUTES -- ONLY AUTHORIZED & AUTHENTICATED USERS CAN ACCESS THESE ROUTES **/
+
+// users cart
+localhost:0000/cart
+
+// users orders
+localhost:0000/my-orders
+
+// users complains
+localhost:0000/my-complains
+
+// users and seller chat 
+localhost:0000/seller/chat
+
+
+

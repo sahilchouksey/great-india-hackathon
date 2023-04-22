@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import "./mixins.scss";
+
+:root {
+  // fonts
+
+  --font: "Poppins", sans-serif;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  // colors
+  --color-primary: #ff8a00;
+  --color-secondary: #ff9f00;
+  --color-tertiary: #fff6e4;
+  --color-black: #2c2c2c;
+  --color-grey: #9c9c9c;
+  --color-danger: #f06543;
+  --color-warn: #ff9f00;
+  --color-success: #4cb944;
+
+  // components
+  --navbar-height: 80px;
+}
+
+// BASE
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-app-region: no-drag;
+}
+
+// overwriting bootstrap defaults
+p {
+  padding: 0 !important;
+  margin: 0 !important;
+  box-sizing: inherit !important;
+}
+
+html {
+  scroll-behavior: smooth;
+  // 1rem = 10px
+  font-size: 62.5%;
+
+  // @include respond(tab-port) {
+  //   font-size: 56.25%;
+  // }
+}
+
+body {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  position: relative;
+  // development only
+  min-height: 100vh;
+
+  font-family: var(--font);
+  line-height: 1.3;
+}
+
+// UTILITIES
+.t-bold {
+  font-weight: var(--font-weight-bold);
+}
+.t-semibold {
+  font-weight: var(--font-weight-semibold);
+}
+.t-medium {
+  font-weight: var(--font-weight-medium);
+}
+.t-regular {
+  font-weight: var(--font-weight-regular);
+}
+.no-text-decoration {
+  text-decoration: none;
+}
+.mt-8 {
+  margin-top: 8rem;
+}
+// text color
+.text-grey {
+  color: #ccc;
+}
+.text-white {
+  color: #fff;
+}
+.text-primary {
+  color: var(--color-primary) !important;
+}
+.text-black {
+  color: var(--color-black) !important;
+}
+.text-danger {
+  color: var(--color-danger);
+}
+.text-warn {
+  color: var(--color-warn);
+}
+.text-success {
+  color: var(--color-success);
+}
+
+// background
+.bg-danger {
+  background-color: var(--color-danger);
+}
+.bg-warn {
+  background-color: var(--color-warn);
+}
+.bg-success {
+  background-color: var(--color-success);
+}
+
+// components
+.line {
+  display: flex;
+  width: 100%;
+  height: 1px;
+  margin: 2rem 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.1);
+  align-items: center;
+  justify-content: flex-start;
+  /* float: left; */
+  position: relative;
+}
