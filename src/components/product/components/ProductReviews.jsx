@@ -187,24 +187,26 @@ export default function ProductReviews({ product }) {
               type="md"
               className={"d-flex align-items-center justify-content-center"}
             >
-              {product.rating}
+              {product?.rating}
               <span
                 className={`ms-3 text-${
-                  defaultRatingsColors[String(product.rating).substring(0, 1)]
+                  defaultRatingsColors[
+                    String(product?.rating)?.toString()?.substring(0, 1)
+                  ]
                 }`}
               >
                 ★
               </span>
             </TextExtraLarge>
             <TextSmall type="md" className={"t-regular mt-2"}>
-              {product.reviews.length} Ratings
+              {product?.reviews?.length} Ratings
             </TextSmall>
           </div>
         </div>
-        <RatingBars ratings={product.reviews} />
+        <RatingBars ratings={product?.reviews} />
       </div>
 
-      <Reviews reviews={product.reviews} />
+      <Reviews reviews={product?.reviews} />
     </div>
   );
 }

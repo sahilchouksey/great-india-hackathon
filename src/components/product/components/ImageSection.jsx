@@ -10,6 +10,10 @@ export default function ImageSection({ images }) {
   const galleryThumbnailRef = useRef();
   const gallerySliderRef = useRef();
 
+  if (!images || images.length === 0) {
+    return null;
+  }
+
   useEffect(() => {
     if (
       gallerySliderRef?.current &&

@@ -3,7 +3,6 @@ import Stock from "./Stock";
 import Overview from "./Overview";
 import BestSelling from "./BestSelling";
 import styles from "./Management.module.scss";
-import Table1 from "./tables/Table1";
 import Over from "./tables/over";
 import ApexChart from "./PieChart";
 import CircularChart from "./PieChart/index2";
@@ -14,7 +13,9 @@ function Management() {
     <div className={`${styles["management"]}`}>
       <div className={`${styles["header"]}`}>
         <h3 className={`${styles["heading"]}`}>Inventory Management </h3>
-        <div className={`${styles["yellow-button"]}`}>Manage Your Inventory</div>
+        <div className={`${styles["yellow-button"]}`}>
+          Manage Your Inventory
+        </div>
       </div>
       {/* <ApexChart /> */}
       <div className={`${styles["container2"]}`}>

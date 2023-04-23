@@ -4,6 +4,7 @@ import Button from "../../button";
 import { TextLarge, TextMedium } from "../../typography";
 import CategoryCard from "../CategoryCard";
 import ProductCard from "../ProductCard";
+import Loading from "../Loading";
 import styles from "./showcase.module.scss";
 
 export default function Showcase({
@@ -13,11 +14,15 @@ export default function Showcase({
   link,
   hideShowAll = false,
   containerClassName,
+  isLoading,
+  error,
 }) {
   let content;
-  if (type == "categories") {
+  if (isLoading) {
+    content = <Loading />;
+  } else if (type == "categories") {
     content = items.map((i) => (
-      <CategoryCard key={i.id} id={i.id} title={i.title} image={i.image} />
+      <CategoryCard key={i._id} id={i._id} name={i.name} image={i.image} />
     ));
     if (!link) {
       link = ROUTES.categories;
@@ -25,13 +30,13 @@ export default function Showcase({
   } else if (type == "products") {
     content = items.map((i) => (
       <ProductCard
-        id={i.id}
+        id={i._id}
         name={i.name}
-        description={i.description}
-        image={i.image}
-        price={i.price}
-        category={i.category}
-        key={i.id}
+        description={i?.description}
+        images={i?.images}
+        price={i?.price}
+        category={i?.category?.name}
+        key={i._id}
       />
     ));
     if (!link) {
@@ -59,7 +64,15 @@ export default function Showcase({
           </Button>
         )}
       </div>
+
       <div className={`${styles["showcase--content"]} mt-4 align-items-center`}>
+        {items?.length == 0 && error && (
+          <div className="d-flex justify-content-center align-items-center">
+            <TextLarge type="lg" className="t-semibold text-danger">
+              No items found
+            </TextLarge>
+          </div>
+        )}
         {content}
       </div>
     </div>

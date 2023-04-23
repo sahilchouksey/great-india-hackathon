@@ -124,9 +124,9 @@
       }
     ],
     "category": "Laptop & PC",
-    "title": "ASUS X441UV",
+    "name": "ASUS X441UV",
     "description": "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
-    "productDetails": "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
+    "details": "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo....",
     "price": 2800,
     "id": 1,
     "stock": 3,

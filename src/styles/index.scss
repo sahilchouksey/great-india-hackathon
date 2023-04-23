@@ -131,3 +131,17 @@ body {
   /* float: left; */
   position: relative;
 }
+
+.loading-container {
+  &-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  width: 100px;
+  height: 100px;
+}
+
+.loading {
+  color: var(--color-primary) !important;
+}

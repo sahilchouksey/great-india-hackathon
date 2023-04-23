@@ -12,9 +12,13 @@ function CartComponent({ children, totalPrice, totalItems, onOrder }) {
         <div className={styles["Cart-container"]}>
           <div className={styles["orders"]}>{children}</div>
         </div>
-        <Button type="primary" className={styles["Place"]} onClick={onOrder}>
-          Place Order
-        </Button>
+        <div
+          className={`d-flex align-items-center justify-content-end pe-3 ${styles["Place-container"]}`}
+        >
+          <Button type="primary" className={styles["Place"]} onClick={onOrder}>
+            Place Order
+          </Button>
+        </div>
       </div>
       <Invoice totalItems={totalItems} totalPrice={totalPrice} />
     </div>

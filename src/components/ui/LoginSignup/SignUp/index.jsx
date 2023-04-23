@@ -7,15 +7,11 @@ import useInput from "../../../../hooks/useInput";
 import Input from "../../Input";
 
 export default function SignUp() {
-  const [first, setFirst] = useState({ Name: "", email: "", password: "" });
   const navigate = useNavigate();
-  const onChange = (e) => {
-    setFirst({ ...first, [e.target.name]: e.target.name });
-  };
 
   const nameValidator = (value) => {
     if (value <= 1) {
-      return "Invalid username";
+      return "Name can't be empty";
     }
     return "";
   };
@@ -25,7 +21,7 @@ export default function SignUp() {
 
   const emailValidator = (value) => {
     if (value.length <= 4) {
-      return "Invalid email";
+      return "Invalid Email";
     }
     return "";
   };
@@ -35,7 +31,7 @@ export default function SignUp() {
 
   const passwordValidator = (value) => {
     if (value.length <= 8) {
-      return "Invalid password";
+      return "Password is too short";
     }
     return "";
   };
@@ -45,8 +41,8 @@ export default function SignUp() {
   );
 
   const confPasswordValidator = (value) => {
-    if (value.length <= 8) {
-      return "Invalid password";
+    if (value.length == password) {
+      return "password does not match with the above password";
     }
     return "";
   };
@@ -65,7 +61,7 @@ export default function SignUp() {
               labelClasses={`${styles.User_name_label}`}
               className={styles["in_userName"]}
               type="text"
-              name="User Name"
+              name="userName"
               value={Name}
               onChange={onNameChange}
               placeholder="Enter your name"
@@ -81,7 +77,7 @@ export default function SignUp() {
               name="email"
               value={email}
               onChange={onEmailChange}
-              placeholder="Email address"
+              placeholder="Enter your Email address"
             ></Input>
             {emailError}
           </div>
@@ -94,7 +90,7 @@ export default function SignUp() {
               name="password"
               value={password}
               onChange={onPasswordChange}
-              placeholder="Enter Password"
+              placeholder="Enter your Password"
             ></Input>
             {passwordError}
           </div>

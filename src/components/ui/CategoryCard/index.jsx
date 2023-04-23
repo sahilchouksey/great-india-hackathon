@@ -4,7 +4,7 @@ import { Image } from "react-bootstrap";
 import Button from "../../button";
 import { ROUTES } from "../../../routes/data";
 
-export default function CategoryCard({ id, image, title }) {
+export default function CategoryCard({ id, image, name }) {
   const link = `${ROUTES.categories}/${id}`;
   return (
     <Button
@@ -20,7 +20,7 @@ export default function CategoryCard({ id, image, title }) {
           className={`t-medium ${styles["CategoryCard--text"]}`}
           type="sm"
         >
-          {title}
+          {name}
         </TextMedium>
       </div>
     </Button>

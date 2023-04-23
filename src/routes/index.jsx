@@ -17,12 +17,12 @@ export default function Routing() {
     <Layout>
       <Routes>
         {/* PUBLIC ROUTES */}
+        <Route path={"/products/:productId"} element={<Product />} />
         <Route exact path={ROUTES.home} element={<Home />} />
         <Route path={ROUTES.complaints} element={<Complaints />} />
         <Route path={ROUTES.products} element={<Products />} />
-        <Route path={ROUTES.categories} element={<Categories />} />
-        <Route path={ROUTES.product} element={<Product />} />
         <Route path={ROUTES.category} element={<Category />} />
+        <Route path={ROUTES.categories} element={<Categories />} />
         <Route path={ROUTES.search} element={<Search />} />
         <Route path={ROUTES.cart} element={<Cart />} />
         {/* AUTHENTICATION PAGES */}

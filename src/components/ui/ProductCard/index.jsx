@@ -1,3 +1,4 @@
+import { Image } from "react-bootstrap";
 import { ROUTES } from "../../../routes/data";
 import Button from "../../button";
 import { TextLarge, TextMedium, TextSmall } from "../../typography";
@@ -7,7 +8,7 @@ export default function Product({
   description,
   category,
   price,
-  image,
+  images,
   id,
 }) {
   const link = `${ROUTES.products}/${id}`;
@@ -19,7 +20,7 @@ export default function Product({
         type="plain"
         className={`no-text-decoration ${styles["ProductCard-body"]} d-flex align-items-center justify-content-center flex-column px-3 py-2`}
       >
-        <img src={image} alt={`${category} image`}></img>
+        <Image src={images?.[0]?.src} alt={`${category} image`}></Image>
         <div
           className={`px-4 d-flex align-items-start justify-content-center flex-column ${styles["ProductCard-info"]}`}
         >
