@@ -13,4 +13,5 @@ export const ROUTES = {
   register: "/signup",
   yourHeader: "/orderHeader",
   inventory: "/Management",
+  complaints: "/complaints",
 };

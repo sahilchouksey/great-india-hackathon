@@ -1,17 +1,17 @@
 import React from 'react'
-import './index.css'
+import styles from './Header.module.scss'
 function IsResolved() {
   return (
-    <div className='headder'>
-        <h3 className='seller'>
+    <div className={s}>
+        <h3 className={`${styles['seller']}`}>
             Seller
         </h3>
-        <div className='isResolved'>
-            <span className='text'><h3>is Your complaint Resolved</h3>
+        <div className={`${styles['isResolved']}`}>
+            <span className={`${styles['text']}`}><h3>is Your complaint Resolved</h3>
             </span>
-            <div className='buttons'>
-                <button className='yes'>Yes</button>
-                <button className='No' onClick={()=>{
+            <div className={`${styles['buttons']}`}>
+                <button className={`${styles['yes']}`}>Yes</button>
+                <button className={`${styles['No']}`} onClick={()=>{
                     window.alert(" We will do our best");
                 }}>No</button>
             </div>

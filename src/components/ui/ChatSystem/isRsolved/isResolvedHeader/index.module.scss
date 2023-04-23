@@ -5,19 +5,25 @@
   border-radius: 6px;
   justify-content: space-around;
   background-color: #f8f9fa;
+  & a {
+    text-decoration: none !important;
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
 }
 .orders {
-  background-color: inherit;
-  border-style: none;
+  background-color: inherit !important;
+  border-style: none !important;
 }
 .complaints {
-  color: rgb(243, 11, 11);
-  background-color: inherit;
-  border-style: none;
+  color: rgb(243, 11, 11) !important;
+  background-color: inherit !important;
+  border-style: none !important;
 }
 ._line {
   transform: rotate(90deg) !important;
   width: 25px !important;
-  color: black;
-  height: 3px;
+  color: black !important;
+  height: 3px !important;
 }

@@ -11,12 +11,14 @@ import Signup from "../containers/Signup";
 import Layout from "../components/layout";
 import { ROUTES } from "./data";
 import Cart from "../containers/Cart";
+import Complaints from "../components/ui/ComplaintResolve";
 export default function Routing() {
   return (
     <Layout>
       <Routes>
         {/* PUBLIC ROUTES */}
         <Route exact path={ROUTES.home} element={<Home />} />
+        <Route path={ROUTES.complaints} element={<Complaints />} />
         <Route path={ROUTES.products} element={<Products />} />
         <Route path={ROUTES.categories} element={<Categories />} />
         <Route path={ROUTES.product} element={<Product />} />
