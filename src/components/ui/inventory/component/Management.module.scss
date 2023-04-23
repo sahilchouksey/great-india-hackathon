@@ -1,0 +1,42 @@
+.management {
+  margin: 0px auto;
+  width: 1000px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+}
+.container2 {
+  max-height: 200px;
+  object-fit: cover;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px 0;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+}
+.heading {
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+.yellow-button {
+  width: auto;
+  background-color: #ff9f00;
+  color: white;
+  text-align: center;
+  font-size: 36px;
+  font: bold;
+  border-radius: 5px;
+}
+
+.Stocks{
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+}

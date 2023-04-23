@@ -12,4 +12,5 @@ export const ROUTES = {
   cart: "/cart",
   register: "/signup",
   yourHeader: "/orderHeader",
+  inventory: "/Management",
 };
